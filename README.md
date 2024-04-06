@@ -56,6 +56,13 @@ The algorithm is as follows:
 ## VALUE ITERATION FUNCTION
 
 ```py
+custom = ["FFHS","HFHF","FFHF","GFFF"]
+env = gym.make('FrozenLake-v1', desc = custom)
+init_state = env.reset()
+goal_state = 12
+P = env.env.P
+
+
 #pradeesh S 212221240038
 def value_iteration(P, gamma=1.0, theta=1e-10):
     V = np.zeros(len(P), dtype=np.float64)
